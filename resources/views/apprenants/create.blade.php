@@ -12,19 +12,28 @@
             @csrf
             <div class="form-group">
                 <label for="nom">Nom:</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+                @error('nom')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+                <input type="text" class="form-control" id="nom" name="nom" >
             </div>
             <div class="form-group">
                 <label for="prenom">Prénom:</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
+                @error('prenom')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+                <input type="text" class="form-control" id="prenom" name="prenom" >
             </div>
             <div class="form-group">
                 <label for="matricule">Matricule:</label>
-                <input type="text" class="form-control" id="matricule" name="matricule" required>
+                <input type="text" class="form-control" id="matricule" name="matricule" >
             </div>
             <div class="form-group">
                 <label for="telephone">Téléphone:</label>
-                <input type="text" class="form-control" id="telephone" name="telephone" required>
+                @error('telephone')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+                <input type="text" class="form-control" id="telephone" name="telephone" >
             </div>
             <button type="submit" class="btn btn-primary">Ajouter</button>
         </form>

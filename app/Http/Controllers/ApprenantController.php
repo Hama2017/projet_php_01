@@ -27,12 +27,16 @@ class ApprenantController extends Controller
             'telephone' => 'required',
         ]);
 
-        Apprenant::create([
+      /*  Apprenant::create([
             'nom' => $request->input('nom'),
             'prenom' => $request->input('prenom'),
             'matricule' => $request->input('matricule'),
             'telephone' => $request->input('telephone'),
         ]);
+        */
+
+        Apprenant::create($request->all());
+
 
         return redirect('/apprenants')->with('success', 'Apprenant ajouté avec succès!');
     }
