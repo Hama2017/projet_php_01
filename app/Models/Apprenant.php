@@ -9,4 +9,5 @@ class Apprenant extends Model
 {
     use HasFactory;
     protected $fillable = ['nom', 'prenom', 'matricule', 'telephone'];
+   // protected $guarded = ['nom', 'prenom', 'matricule', 'telephone']; pour inhiber
 }

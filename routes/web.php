@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApprenantController;
-
+use App\Http\Controllers\MatiereController;
 
 
 /*
@@ -38,3 +38,6 @@ Route::put('/apprenants/{apprenant}', [ApprenantController::class, 'update']);
 
 // Route pour supprimer un apprenant
 Route::delete('/apprenants/{apprenant}', [ApprenantController::class, 'destroy']);
+
+// Route pour lister les matieres
+Route::get('/matieres', [MatiereController::class, 'index'])->name('list-subjects');

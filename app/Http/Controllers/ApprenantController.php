@@ -62,4 +62,3 @@ class ApprenantController extends Controller
         return redirect('/apprenants');
     }
 }
-
